@@ -1,0 +1,25 @@
+# Environment
+.env
+.env.local
+
+# API keys
+*.key
+
+# Temp files
+/tmp/
+
+# Data files that change every run (track templates, not generated data)
+data/seen_tweets.json
+data/seen_urls.json
+data/run-state.json
+data/history/
+data/logs/
+data/routing/
+data/suggestions/latest.md
+data/suggestions/archive/
+
+# Node
+node_modules/
+
+# OS
+.DS_Store

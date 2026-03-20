@@ -1,0 +1,49 @@
+{
+  "name": "Claude Code Knowledge",
+  "research_modules": ["web", "twitter-accounts", "twitter-search"],
+  "web": {
+    "keywords": [
+      "Claude Code",
+      "Claude Code agents",
+      "Claude Code MCP",
+      "Claude Code skills",
+      "Anthropic CLI developer tools",
+      "Claude Code orchestration"
+    ],
+    "focus_areas": [
+      "new features and updates",
+      "agent patterns and best practices",
+      "MCP server ecosystem",
+      "memory management and context",
+      "multi-agent workflows",
+      "CLI integrations and tooling",
+      "skills and commands"
+    ]
+  },
+  "twitter": {
+    "accounts": [
+      "@trq212",
+      "@felixrieseberg",
+      "@mikefutia",
+      "@claudeai",
+      "@itsolelehmann"
+    ],
+    "core_search_terms": [
+      "\"Claude Code\"",
+      "Claude Code agents",
+      "Claude Code MCP",
+      "Claude Code skills",
+      "vibecoding Claude"
+    ]
+  },
+  "domains": [
+    "agents-and-patterns",
+    "skills-and-commands",
+    "mcp-servers",
+    "memory-and-context",
+    "orchestration",
+    "cli-and-tooling",
+    "updates-and-releases"
+  ],
+  "research_directives": []
+}
