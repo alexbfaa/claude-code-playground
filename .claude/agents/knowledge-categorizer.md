@@ -30,21 +30,21 @@ For each significant finding, determine which knowledge domain(s) it belongs to.
 
 | Finding Type | Route To |
 |--------------|----------|
-| Agent patterns, subagent strategies, agent teams, agent design | agents-and-patterns |
-| New skills, commands, slash command patterns, skill composition | skills-and-commands |
-| New MCP servers, MCP protocol updates, tool integrations | mcp-servers |
-| Memory management, context windows, persistence strategies | memory-and-context |
+| Agent patterns, subagent strategies, agent teams, agent design, hooks | agents |
+| New skills, commands, slash command patterns, skill composition, SKILL.md | skills |
+| New MCP servers, MCP protocol updates, tool integrations | mcp |
+| Memory management, context windows, persistence strategies | memory |
 | Multi-agent orchestration, pipelines, worktrees, parallelism | orchestration |
-| CLI updates, VS Code extension, installation, toolchain, external CLI integrations | cli-and-tooling |
-| Official Anthropic releases, version updates, changelogs, model updates | updates-and-releases |
+| CLI updates, VS Code extension, installation, toolchain, external CLI integrations, automation | cli |
+| Official Anthropic releases, version updates, changelogs, model updates, community events | releases |
 
 **Multi-routing examples:**
 
 Some findings route to multiple domains:
-- "New agent memory feature" -> agents-and-patterns + memory-and-context
-- "MCP server for orchestrating agent teams" -> mcp-servers + orchestration
-- "CLI update adds new slash command support" -> cli-and-tooling + skills-and-commands
-- "New Claude Code version with agent improvements" -> updates-and-releases + agents-and-patterns
+- "New agent memory feature" -> agents + memory
+- "MCP server for orchestrating agent teams" -> mcp + orchestration
+- "CLI update adds new slash command support" -> cli + skills
+- "New Claude Code version with agent improvements" -> releases + agents
 
 **Be selective.** Not every finding is significant. Skip:
 - Generic AI commentary not specific to Claude Code
@@ -68,7 +68,7 @@ Write to `data/routing/{DATE}-routing.json`:
       "source": "web",
       "confidence": "HIGH",
       "significance": "HIGH",
-      "route_to": ["orchestration", "agents-and-patterns"],
+      "route_to": ["orchestration", "agents"],
       "reason": "Major new capability for multi-agent workflows"
     },
     {
@@ -76,12 +76,12 @@ Write to `data/routing/{DATE}-routing.json`:
       "source": "twitter-search",
       "confidence": "MEDIUM",
       "significance": "MEDIUM",
-      "route_to": ["mcp-servers"],
+      "route_to": ["mcp"],
       "reason": "New ecosystem tool relevant to user's stack"
     }
   ],
-  "domains_updated": ["orchestration", "agents-and-patterns", "mcp-servers"],
-  "domains_unchanged": ["skills-and-commands", "memory-and-context", "cli-and-tooling", "updates-and-releases"]
+  "domains_updated": ["orchestration", "agents", "mcp"],
+  "domains_unchanged": ["skills", "memory", "cli", "releases"]
 }
 ```
 
@@ -105,7 +105,7 @@ Write to `data/routing/{DATE}-routing.json`:
   "source_files": [...],
   "findings": [],
   "domains_updated": [],
-  "domains_unchanged": ["agents-and-patterns", "skills-and-commands", "mcp-servers", "memory-and-context", "orchestration", "cli-and-tooling", "updates-and-releases"]
+  "domains_unchanged": ["agents", "skills", "mcp", "memory", "orchestration", "cli", "releases"]
 }
 ```
 
@@ -125,6 +125,6 @@ You produce exactly one file: `data/routing/{DATE}-routing.json`
 - **Be selective.** Focus on significant, actionable findings.
 - **Preserve confidence levels.** Copy from the original research finding.
 - **Multi-route when appropriate.** A single finding can route to multiple domains.
-- **Use exact domain names.** The orchestrator uses these to dispatch synthesizers: agents-and-patterns, skills-and-commands, mcp-servers, memory-and-context, orchestration, cli-and-tooling, updates-and-releases.
+- **Use exact domain names.** The orchestrator uses these to dispatch synthesizers: agents, skills, mcp, memory, orchestration, cli, releases.
 - **Stay fast.** This is a haiku agent. Categorize and move on.
 - **Accuracy matters.** Wrong routing wastes compute or misses important knowledge.

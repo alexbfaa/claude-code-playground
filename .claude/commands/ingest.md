@@ -104,7 +104,7 @@ After all research is complete:
 5. Wait for the categorizer to complete
 6. Read the routing manifest from `data/routing/{DATE}-routing.json`
 7. Parse the `domains_updated` array
-8. **Fallback if categorizer fails:** If it fails or produces invalid JSON, fall back to dispatching the synthesizer for ALL domains with ALL findings. Log: "Categorizer failed -- updating all domains."
+8. **Fallback if categorizer fails:** If it fails or produces invalid JSON, fall back to dispatching the synthesizer for ALL domains (agents, skills, mcp, memory, orchestration, cli, releases) with ALL findings. Log: "Categorizer failed -- updating all domains."
 
 ### Step 5: Dispatch knowledge-synthesizer (parallel subagents)
 
@@ -113,10 +113,10 @@ Based on the routing manifest, for each domain in `domains_updated`:
 1. Launch a **knowledge-synthesizer** subagent with `run_in_background: true`:
    - The domain name
    - The findings routed to this domain (from the manifest's `findings` array, filtered to those with this domain in their `route_to`)
-   - The path: `data/knowledge/{domain}.md`
+   - The path to the domain folder: `data/knowledge/{domain}/`
    - Today's date
 
-2. Multiple synthesizers can run in parallel since each writes to its own domain file
+2. Multiple synthesizers can run in parallel since each writes to its own domain folder
 3. Wait for all synthesizers to complete
 
 If `domains_updated` is empty, skip this step.

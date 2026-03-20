@@ -4,6 +4,7 @@
       "name": "News-Watcher",
       "description": "Multi-account Twitter monitoring for trading signals. Polls tweets every 30-60s, uses AI to classify signals, sends Pushover notifications for high-priority events.",
       "stack": "Next.js, TypeScript, PostgreSQL (Railway), Claude AI, Pushover",
+      "status": "inactive",
       "current_state": "Active, mature (Phase 5 complete)",
       "claude_code_usage": "General development",
       "opportunities": "Could benefit from research agents for signal enrichment, MCP integrations for additional data sources, automated quality monitoring agents"
@@ -12,6 +13,7 @@
       "name": "News-Watcher-v2",
       "description": "Rebuilt version of News-Watcher on modern stack with Supabase backend and Vercel frontend.",
       "stack": "Next.js 16, React 19, Drizzle ORM, Supabase, RapidAPI, Vercel",
+      "status": "active",
       "current_state": "Active",
       "claude_code_usage": "General development",
       "opportunities": "Could benefit from multi-agent research patterns, orchestrated ingestion pipelines, MCP servers for Supabase integration"
@@ -20,6 +22,7 @@
       "name": "Onchain Backtester",
       "description": "Backtests crypto trading strategies using on-chain metrics from Santiment. 3,354 days of BTC data with 7 metrics and TradingView charts.",
       "stack": "Next.js 14, Drizzle ORM, Supabase, TradingView Lightweight Charts, Google Sheets (SanSheets)",
+      "status": "inactive",
       "current_state": "Active (Phase 3: Polish & Expand)",
       "claude_code_usage": "General development",
       "opportunities": "Could benefit from test-generation agents, data pipeline skills, automated strategy analysis agents"
@@ -28,6 +31,7 @@
       "name": "DeFi Arb Monitor",
       "description": "Stablecoin arbitrage tracker monitoring sUSDAI on Arbitrum and sUSDe on Ethereum. Checks prices every 15 minutes, calculates APR, sends threshold alerts.",
       "stack": "Next.js, Supabase Edge Functions (Deno), PostgreSQL, viem, CoW Protocol API, Pushover",
+      "status": "inactive",
       "current_state": "Active",
       "claude_code_usage": "General development",
       "opportunities": "Could benefit from monitoring agents, MCP servers for DeFi data, automated alert tuning"
@@ -36,6 +40,7 @@
       "name": "WyndLabs Monitor",
       "description": "Monorepo with Playwright scraper, SQLite database, and Next.js dashboard for tracking WyndLabs activity.",
       "stack": "Next.js 16, React 19, Playwright, SQLite, Recharts, Tailwind v4, Railway",
+      "status": "inactive",
       "current_state": "Active",
       "claude_code_usage": "General development",
       "opportunities": "Could benefit from web scraping agents, scheduled task orchestration, MCP data tools"
@@ -44,6 +49,7 @@
       "name": "Meal Planner",
       "description": "AI-powered meal planning application with recipe generation and nutritional tracking.",
       "stack": "Next.js 16, React 19, Supabase, OpenAI SDK, shadcn/ui, Tailwind v4, Zod, vitest",
+      "status": "inactive",
       "current_state": "Active",
       "claude_code_usage": "General development",
       "opportunities": "Could benefit from content-generation skills, user-facing AI agents, automated testing agents"
@@ -52,6 +58,7 @@
       "name": "Investment Monitor",
       "description": "Multi-agent system tracking investments with automated research. Three-layer architecture: researchers gather data from web/Twitter, specialists analyze by domain, synthesizer maintains living thesis documents.",
       "stack": "Claude Code agents, file-based, RapidAPI Twitter, Node.js scripts",
+      "status": "active",
       "current_state": "Active, mature (most advanced CC usage)",
       "claude_code_usage": "Heavy -- 12+ agents, multi-agent orchestration, Twitter skill, finding-router, specialist analysts, slash commands (/check, /deep-analysis)",
       "opportunities": "Most likely to benefit from ANY new CC capability. New orchestration features, memory improvements, agent team patterns, worktree support for parallel analysis, MCP servers for financial data"
@@ -60,6 +67,7 @@
       "name": "Analyst-2.0",
       "description": "Company analysis framework using WAT (Workflows, Agents, Tools) pattern. Workflows are SOPs in markdown, agents make decisions, tools are deterministic Python scripts.",
       "stack": "WAT framework, Python scripts, Claude Code agents",
+      "status": "inactive",
       "current_state": "Active",
       "claude_code_usage": "Moderate -- agent-based analysis with structured workflows",
       "opportunities": "Could benefit from new agent composition patterns, skill layering, structured output improvements"
@@ -68,6 +76,7 @@
       "name": "Discord Scraper",
       "description": "Early-stage project to scrape Discord server messages and query them with LLM. Still in planning phase.",
       "stack": "TBD (planning phase)",
+      "status": "inactive",
       "current_state": "Planning",
       "claude_code_usage": "Not yet started",
       "opportunities": "Could benefit from MCP server for Discord, data pipeline agents, knowledge base patterns from this project"

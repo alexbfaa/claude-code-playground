@@ -5,8 +5,8 @@ A knowledge ingestion system that monitors the Claude Code ecosystem and maps ne
 ## What This Project Does
 
 1. **Ingests knowledge** -- monitors Twitter and the web for Claude Code developments (features, agent patterns, skills, MCP servers, CLI tools, orchestration, memory management)
-2. **Organizes findings** -- categorizes discoveries into 7 knowledge domains and maintains living knowledge files
-3. **Generates suggestions** -- maps new findings to your 9 active projects with specific, actionable recommendations
+2. **Organizes findings** -- categorizes discoveries into 7 knowledge domains and maintains progressive guide files and living reference files
+3. **Generates suggestions** -- maps new findings to your active projects with specific, actionable recommendations
 4. **Maintains a sandbox** -- still supports testing agents, skills, and patterns before promoting them to global config
 
 ## How to Use
@@ -39,14 +39,19 @@ Results go to:
 
 ### Reading Knowledge
 
-Browse `data/knowledge/` for domain-specific knowledge:
-- `agents-and-patterns.md` -- agent design and subagent strategies
-- `skills-and-commands.md` -- skill development and slash commands
-- `mcp-servers.md` -- MCP server ecosystem and integrations
-- `memory-and-context.md` -- memory management and persistence
-- `orchestration.md` -- multi-agent coordination and pipelines
-- `cli-and-tooling.md` -- CLI features and external tool integrations
-- `updates-and-releases.md` -- official releases and changelogs
+Browse `data/knowledge/` for domain-specific knowledge organized into 7 topic folders. Each folder has two types of files:
+
+- **Guide files** (numbered, like `01-what-are-agents.md`) -- progressive educational content, from foundations to advanced topics
+- **Reference files** (like `recent-developments.md`, `ecosystem.md`) -- living documents updated by the pipeline with news, tools, and ecosystem changes
+
+**Domains:**
+- `agents/` -- what agents are, how to build them, design patterns, hooks
+- `skills/` -- what skills are, how to build them, advanced features
+- `mcp/` -- MCP protocol, using servers, notable integrations
+- `memory/` -- context windows, memory systems, advanced persistence
+- `orchestration/` -- when and how to coordinate multiple agents
+- `cli/` -- commands, automation, scheduling approaches
+- `releases/` -- changelog, community events and education
 
 ### Reading Suggestions
 
@@ -64,10 +69,11 @@ Researchers (gather raw data)
   |- Twitter search research (main session, uses fetch scripts)
     |
     v
-knowledge-categorizer (haiku, routes findings to 7 domains)
+knowledge-categorizer (haiku, routes findings to 7 domain folders)
     |
     v
 knowledge-synthesizer (sonnet, one per updated domain, parallel)
+  |- routes findings to guide files (append-only) or reference files (freely update)
     |
     v
 use-case-finder (opus, maps findings to your projects)
@@ -76,7 +82,7 @@ use-case-finder (opus, maps findings to your projects)
 ## Key Directories
 
 - `config/` -- what to monitor and your project profiles
-- `data/knowledge/` -- the knowledge base (7 domain files)
+- `data/knowledge/` -- the knowledge base (7 domain folders with guide + reference files)
 - `data/suggestions/` -- practical suggestions for your projects
 - `data/history/` -- raw research findings by date
 - `data/logs/` -- session logs showing what each researcher did
@@ -90,4 +96,3 @@ use-case-finder (opus, maps findings to your projects)
 
 - Test agents: `Use the [agent-name] agent to [task]`
 - Graduate experiments: check `graduating/graduation-checklist.md`, copy to `~/.claude/`, run `/sync-config`
-- Learning notes are in `learning/` for reference
